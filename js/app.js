@@ -78,7 +78,7 @@ export function updateItemName(newName, newDueDate = null) {
   const now = new Date().toLocaleString();
   items = items.map((item) => {
     if (item.id === editId) {
-      return { ...item, name: newName, dueDate: newDueDate || item.dueDate, updatedDate: now };
+      return { ...item, name: newName, updatedDate: now };
     }
     return item;
   });
